@@ -27,13 +27,8 @@ export default function DenseTable(props) {
         </TableHead>
         <TableBody>
           {props.data.map((row) => (
-            <TableRow
-              key={row.area_name}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-            >
-              <TableCell component="th" scope="row">
-                {row.name}
-              </TableCell>
+            <TableRow>
+              <TableCell align="right">{row.area_name}</TableCell>
               <TableCell align="right">{row.area_id}</TableCell>
               <TableCell align="right">{row.color}</TableCell>
               <TableCell align="right">{row.location}</TableCell>
