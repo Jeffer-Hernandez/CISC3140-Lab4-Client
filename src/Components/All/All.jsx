@@ -1,6 +1,7 @@
 import DenseTable from '../Table/Table';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import Button from '@mui/material/Button';
 
 
 function All() {
@@ -17,16 +18,23 @@ function All() {
                     const error = (data && data.message) || response.statusText;
                     return Promise.reject(error);
                 }
-                console.log(data)
                 // this.setState({ totalReactPackages: data.total })
                 return data;
             }).then(data => setData(data))
         },[])
     if (data != null){
     return (
-        console.log(data),
-        <div className='All'>
-            <DenseTable data={data}></DenseTable>
+        <div>
+            <div className='Home'>
+                <Button href="/all">See All</Button>
+                <Button href="/create">Create</Button>
+                <Button href="/update">Update</Button>
+                <Button href="/delete">Delete</Button>
+                <Button href="/find">Find</Button>
+            </div>
+            <div className='All'>
+                <DenseTable data={data}></DenseTable>
+            </div>
         </div>
     );
     }

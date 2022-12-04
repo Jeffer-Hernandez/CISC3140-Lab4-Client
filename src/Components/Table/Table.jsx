@@ -39,7 +39,7 @@ export default function DenseTable(props) {
               <TableCell align="right">{row.location}</TableCell>
               <TableCell align="right">{row.above_ground_feet}</TableCell>
               <TableCell align="right">{row.specific_location}</TableCell>
-              <TableCell align="right">{row.activities}</TableCell>
+              <TableCell align="right">{row.activies}</TableCell>
               <TableCell align="right">{row.human_interaction}</TableCell>
             </TableRow>
           ))}

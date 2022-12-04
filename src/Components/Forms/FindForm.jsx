@@ -65,8 +65,8 @@ export default function FindForm() {
   <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
     <TableHead>
       <TableRow>
-        <TableCell>Area Name</TableCell>
         <TableCell align="right">Area Id</TableCell>
+        <TableCell align="right">Area Name</TableCell>
         <TableCell align="right">Color</TableCell>
         <TableCell align="right">Location</TableCell>
         <TableCell align="right">Feet Above Ground</TableCell>
@@ -77,20 +77,14 @@ export default function FindForm() {
     </TableHead>
     <TableBody>
       
-      <TableRow
-      //   key={data.area_name}
-      //   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-      // >
-      >
-        <TableCell component="th" scope="row">
-          {/* {console.log(data)} */}
-        </TableCell>
+      <TableRow>
         <TableCell align="right">{data.area_id}</TableCell>
+        <TableCell align="right">{data.area_name}</TableCell>
         <TableCell align="right">{data.color}</TableCell>
         <TableCell align="right">{data.location}</TableCell>
         <TableCell align="right">{data.above_ground_feet}</TableCell>
         <TableCell align="right">{data.specific_location}</TableCell>
-        <TableCell align="right">{data.activities}</TableCell>
+        <TableCell align="right">{data.activies}</TableCell>
         <TableCell align="right">{data.human_interaction}</TableCell>
       </TableRow>
 
